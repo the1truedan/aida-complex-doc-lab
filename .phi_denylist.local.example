@@ -1,0 +1,5 @@
+# Copy to .phi_denylist.local (gitignored) on machines that handle real clinical packets.
+# One pattern per line. Do NOT put real identifiers in the committed tree.
+#
+# PHI_CANARY_NEVER_COMMIT
+# REAL_MRN_PLACEHOLDER_999

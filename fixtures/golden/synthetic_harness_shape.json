@@ -1,0 +1,6 @@
+{
+  "schema_note": "Shape expectation for scrubbed synthetic harness output",
+  "required_top_keys": ["schema", "privacy_class", "no_phi_in_this_file", "counts", "documents_metrics_only"],
+  "min_documents": 3,
+  "forbid_keys_anywhere": ["snippet", "text_preview", "mrn", "dob"]
+}

@@ -1,0 +1,148 @@
+{
+  "schema": "aida.public_run_metrics.v1",
+  "privacy_class": "public-summary",
+  "no_phi_in_this_file": true,
+  "stamp_id": "complex-multidoc-first-pass",
+  "date": "2026-08-05",
+  "document_count": 9,
+  "unique": 9,
+  "date_span_filename_only": "2025-04-24..2026-07-29",
+  "total_pdf_bytes": 2319739,
+  "total_extracted_chars": 160442,
+  "ada_score_typical": 85,
+  "needs_ocr": false,
+  "ocr_not_required": true,
+  "documents_metrics_only": [
+    {
+      "ext": "pdf",
+      "bytes": 249674,
+      "decidable": true,
+      "chars": 13921,
+      "needs_ocr": false,
+      "accessible_as_is": true,
+      "ada_score": 85,
+      "ada_flags_count": 1,
+      "errors_count": 0
+    },
+    {
+      "ext": "pdf",
+      "bytes": 260930,
+      "decidable": true,
+      "chars": 18109,
+      "needs_ocr": false,
+      "accessible_as_is": true,
+      "ada_score": 85,
+      "ada_flags_count": 1,
+      "errors_count": 0
+    },
+    {
+      "ext": "pdf",
+      "bytes": 262516,
+      "decidable": true,
+      "chars": 21759,
+      "needs_ocr": false,
+      "accessible_as_is": true,
+      "ada_score": 85,
+      "ada_flags_count": 1,
+      "errors_count": 0
+    },
+    {
+      "ext": "pdf",
+      "bytes": 258964,
+      "decidable": true,
+      "chars": 18388,
+      "needs_ocr": false,
+      "accessible_as_is": true,
+      "ada_score": 85,
+      "ada_flags_count": 1,
+      "errors_count": 0
+    },
+    {
+      "ext": "pdf",
+      "bytes": 262869,
+      "decidable": true,
+      "chars": 19377,
+      "needs_ocr": false,
+      "accessible_as_is": true,
+      "ada_score": 85,
+      "ada_flags_count": 1,
+      "errors_count": 0
+    },
+    {
+      "ext": "pdf",
+      "bytes": 260922,
+      "decidable": true,
+      "chars": 20205,
+      "needs_ocr": false,
+      "accessible_as_is": true,
+      "ada_score": 85,
+      "ada_flags_count": 1,
+      "errors_count": 0
+    },
+    {
+      "ext": "pdf",
+      "bytes": 257428,
+      "decidable": true,
+      "chars": 18097,
+      "needs_ocr": false,
+      "accessible_as_is": true,
+      "ada_score": 85,
+      "ada_flags_count": 1,
+      "errors_count": 0
+    },
+    {
+      "ext": "pdf",
+      "bytes": 250467,
+      "decidable": true,
+      "chars": 14546,
+      "needs_ocr": false,
+      "accessible_as_is": true,
+      "ada_score": 85,
+      "ada_flags_count": 1,
+      "errors_count": 0
+    },
+    {
+      "ext": "pdf",
+      "bytes": 255969,
+      "decidable": true,
+      "chars": 16040,
+      "needs_ocr": false,
+      "accessible_as_is": true,
+      "ada_score": 85,
+      "ada_flags_count": 1,
+      "errors_count": 0
+    }
+  ],
+  "artifact_mtimes_local": {
+    "pdf_stage_first": "2026-08-04 15:22:01",
+    "manifest": "2026-08-04 20:10:34",
+    "all_extracted": "2026-08-04 20:10:34",
+    "synthesis": "2026-08-04 20:12:18",
+    "harness": "2026-08-04 20:12:32",
+    "brief": "2026-08-04 20:29:51"
+  },
+  "artifact_sizes_bytes": {
+    "synthesis_markdown": 62411,
+    "meeting_brief_markdown": 11720,
+    "harness_json": 7707,
+    "manifest_json": 173418,
+    "all_extracted_json": 331036
+  },
+  "wall_clock_minutes": {
+    "pdf_stage_to_brief": 307.8,
+    "extract_to_brief": 19.3,
+    "synthesis_to_brief": 17.6
+  },
+  "locality_policy": {
+    "phi_route": "manager-phi-local",
+    "cloud_llm": "forbidden",
+    "storage": "NFS medical staging on LAN (path omitted)",
+    "git_commit_of_phi": "forbidden"
+  },
+  "notes": [
+    "Patient names, MRNs, clinical text, snippets intentionally omitted",
+    "Per-file content hashes of production PDFs omitted (re-identification risk)",
+    "Source harness had PHI in snippet fields \u2014 never copy those fields",
+    "Wall clock includes operator/agent idle between stage and process"
+  ]
+}

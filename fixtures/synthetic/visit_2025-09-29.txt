@@ -1,0 +1,12 @@
+SYNTHETIC VISIT NOTE — NOT REAL PHI
+Client: Jordan Lee  ClientId: SYN-0001  Note date: 2025-09-29
+Service: Home-based supportive care visit (synthetic)
+Provider: Alex Rivera, NP (synthetic)
+
+Interval history (synthetic): increased caregiver questions about scheduling and transportation.
+Medications (synthetic): continue current list; reconcile with pharmacy printout next visit.
+Code status (synthetic): full code reviewed with family present.
+Allergies (synthetic): none listed on this form.
+
+Assessment (synthetic): continue home plan; schedule social work touchpoint if transportation barriers persist.
+Plan (synthetic): plain-language summary for family; process questions list for care coordinator.

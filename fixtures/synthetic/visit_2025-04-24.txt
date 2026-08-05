@@ -1,0 +1,12 @@
+SYNTHETIC VISIT NOTE — NOT REAL PHI
+Client: Jordan Lee  ClientId: SYN-0001  Note date: 2025-04-24
+Service: Home-based supportive care visit (synthetic)
+Provider: Alex Rivera, NP (synthetic)
+
+Chief concerns (synthetic): fatigue management education; medication review checklist.
+Goals of care (synthetic): remain at home with family support; full code status confirmed this visit.
+Allergies (synthetic): none listed on this form.
+Care team (synthetic): primary Dr. Kim; specialty Dr. Patel.
+
+Assessment (synthetic): stable for home plan; follow up in 4–6 weeks.
+Plan (synthetic): caregiver education handout; review equipment needs next visit.
