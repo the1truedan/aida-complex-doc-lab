@@ -2,14 +2,15 @@
 
 | Artifact | Visibility | Role |
 |----------|------------|------|
-| **This repo** `aida-complex-doc-lab` | **public** | Production proof narrative + synthetic harness |
-| **mok-tua** | private → planned public wave | Pinokio / creative conductor — different product |
+| **This repo** `aida-complex-doc-lab` | **public** · [Pages](https://the1truedan.github.io/aida-complex-doc-lab/) | Production proof narrative + synthetic harness |
+| **mok-tua** | **public** · [Pages](https://the1truedan.github.io/mok-tua/) | Pinokio / creative conductor — different product |
 | **ada-doc-check** (future extract) | public candidate | Generic ADA/WCAG scorer (Product A) |
 | **plain-language-relay** (future) | public candidate | Dual-audience plain language (Product B) |
-| **johnny-appleseed-chipper** | private · Stage-1 scrub clean | Custody / CHIPPER / CHAINS |
+| **johnny-appleseed-chipper** | **public** · [Pages](https://the1truedan.github.io/johnny-appleseed-chipper/) | Custody / CHIPPER / CHAINS |
 | **Control monorepo** (`grokcode`) | private → planned public **fork** later | Full mesh + build history, scrubbed |
-| **ai-gateway** | public | Headroom → LiteLLM front door |
-| **grok-tua-tok-tua** | public | Dual-pane coding CLIs + continuity pattern |
+| **ai-gateway** | **public** · [Pages](https://the1truedan.github.io/ai-gateway/) | Headroom → LiteLLM front door |
+| **grok-tua-tok-tua** | **public** · [Pages](https://the1truedan.github.io/grok-tua-tok-tua/) | Dual-pane coding CLIs + continuity pattern |
+| **fast-models** | **public** · [Pages](https://the1truedan.github.io/fast-models/) | Shared file pool (not this lab) |
 
 Mesh diagram: [`MANAGER_CONNECTIVITY.md`](./MANAGER_CONNECTIVITY.md).
 

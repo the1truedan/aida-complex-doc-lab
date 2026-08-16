@@ -22,5 +22,7 @@ Scoring and synthesis helpers are **not** certification or clinical decision too
 
 ## Public siblings
 
-- https://github.com/the1truedan/ai-gateway  
-- https://github.com/the1truedan/grok-tua-tok-tua  
+- https://the1truedan.github.io/ai-gateway/  
+- https://the1truedan.github.io/grok-tua-tok-tua/  
+- https://the1truedan.github.io/johnny-appleseed-chipper/  
+- https://the1truedan.github.io/aida-complex-doc-lab/  

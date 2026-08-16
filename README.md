@@ -1,12 +1,18 @@
 # aida-complex-doc-lab
 
+[![Version](https://img.shields.io/badge/version-0.2.0-8eb4ff.svg)](CHANGELOG.md)
+[![Pages](https://img.shields.io/badge/pages-aida--complex--doc--lab-e8c27a.svg)](https://the1truedan.github.io/aida-complex-doc-lab/)
+
 **Public** proof lab for an **ADA-ish, prepare-only** multi-document pipeline aimed at **caregiver cognitive load** — structure dense paperwork into reviewable markdown **without** shipping protected health information.
+
+**Site:** [the1truedan.github.io/aida-complex-doc-lab](https://the1truedan.github.io/aida-complex-doc-lab/) ·
+**Release:** [`v0.2.0`](CHANGELOG.md)
 
 | | |
 |--|--|
 | Visibility | **Public** (GitHub) · optional private Forgejo mirror |
 | Live clinical PDFs | **Never** in this git tree |
-| Related public stack | [ai-gateway](https://github.com/the1truedan/ai-gateway) · [grok-tua-tok-tua](https://github.com/the1truedan/grok-tua-tok-tua) |
+| Related public stack | [ai-gateway](https://the1truedan.github.io/ai-gateway/) · [grok-tua-tok-tua](https://the1truedan.github.io/grok-tua-tok-tua/) · [johnny-appleseed-chipper](https://the1truedan.github.io/johnny-appleseed-chipper/) |
 
 ---
 

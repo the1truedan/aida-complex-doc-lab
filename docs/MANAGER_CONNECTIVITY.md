@@ -42,10 +42,13 @@ Full mesh modules live in the private control monorepo (not published here).
 | **Session index** | local UI — **IDs only** | Do not bulk-dump year view into models |
 
 Public sibling that shows how agents attach to the gateway:  
-https://github.com/the1truedan/grok-tua-tok-tua  
+https://the1truedan.github.io/grok-tua-tok-tua/  
 
 Public gateway glue:  
-https://github.com/the1truedan/ai-gateway  
+https://the1truedan.github.io/ai-gateway/  
+
+Custody sketch (classify / hash / receipt):  
+https://the1truedan.github.io/johnny-appleseed-chipper/  
 
 ---
 

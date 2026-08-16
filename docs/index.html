@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>A.I.D.A. · complex-doc lab</title>
+<meta name="description" content="Prepare-only accessibility triage and caregiver cognitive-load proof. Synthetic fixtures plus scrubbed metrics. No PHI in this repo." />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<style>
+  :root {
+    --bg: #10141c;
+    --bg-panel: #171d28;
+    --bg-panel-2: #1d2432;
+    --line: #2c3548;
+    --fg: #e8eef8;
+    --fg-dim: #9aa8bf;
+    --fg-dimmer: #66758c;
+    --accent: #8eb4ff;
+    --accent-soft: #b7cdff;
+    --paper: #e8c27a;
+    --pass: #7dcea0;
+    --flag: #c084fc;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--fg); }
+  body {
+    font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    line-height: 1.6; -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+  ::selection { background: var(--accent); color: var(--bg); }
+
+  .hero { position: relative; overflow: hidden; border-bottom: 1px solid var(--line); }
+  #paper-rain { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.42; }
+  .hero-inner {
+    position: relative; z-index: 1; max-width: 920px; margin: 0 auto;
+    padding: 5.5rem 1.5rem 4rem; text-align: center;
+  }
+  .eyebrow {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--accent-soft); margin: 0 0 1.4rem;
+  }
+  .wordmark {
+    margin: 0;
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-weight: 700; font-size: clamp(2.2rem, 7vw, 4.2rem);
+    letter-spacing: 0.08em;
+    text-shadow: 0 0 8px rgba(142,180,255,0.4), 0 0 24px rgba(232,194,122,0.16);
+  }
+  .wordmark span { color: var(--accent); }
+  .tagline {
+    max-width: 50ch; margin: 1.4rem auto 0; font-size: 1.1rem;
+    color: var(--fg-dim); text-wrap: balance;
+  }
+  .hero-cta {
+    display: flex; justify-content: center; align-items: center;
+    gap: 0.9rem; flex-wrap: wrap; margin-top: 2.4rem;
+  }
+  .btn {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.85rem; text-decoration: none; padding: 0.65rem 1.1rem;
+    border-radius: 3px; border: 1px solid var(--line);
+    background: var(--bg-panel); color: var(--fg);
+  }
+  .btn:hover { border-color: var(--accent); color: var(--accent-soft); }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: var(--bg); font-weight: 600; }
+  .btn.primary:hover { background: var(--accent-soft); }
+  .version-chip {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.78rem; color: var(--fg-dimmer);
+  }
+  .version-chip b { color: var(--paper); }
+
+  section.band { max-width: 980px; margin: 0 auto; padding: 4.2rem 1.5rem; }
+  .section-head { text-align: center; margin-bottom: 2.6rem; }
+  .section-eyebrow {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--fg-dimmer); margin: 0 0 0.7rem;
+  }
+  .section-title { margin: 0; font-size: 1.5rem; font-weight: 600; text-wrap: balance; }
+  .section-sub { max-width: 54ch; margin: 0.7rem auto 0; color: var(--fg-dim); }
+
+  .stack-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px;
+    background: var(--line); border: 1px solid var(--line); border-radius: 6px; overflow: hidden;
+  }
+  .stack-card {
+    background: var(--bg-panel); padding: 1.5rem 1.4rem; display: flex;
+    flex-direction: column; gap: 0.5rem; text-decoration: none; min-height: 148px;
+  }
+  a.stack-card:hover { background: var(--bg-panel-2); }
+  .stack-card .role {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--accent-soft);
+  }
+  .stack-card h3 { margin: 0; font-size: 1.08rem; }
+  .stack-card p { margin: 0; font-size: 0.9rem; color: var(--fg-dim); flex-grow: 1; }
+  .stack-card .link-hint {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.74rem; color: var(--paper);
+  }
+
+  .metrics {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
+    background: var(--line); border: 1px solid var(--line); border-radius: 6px; overflow: hidden;
+  }
+  .metric {
+    background: var(--bg-panel); padding: 1.3rem 1.1rem; text-align: center;
+  }
+  .metric .n {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 1.7rem; font-weight: 700; color: var(--accent);
+    letter-spacing: 0.02em;
+  }
+  .metric .n.paper { color: var(--paper); }
+  .metric .n.pass { color: var(--pass); }
+  .metric .l {
+    margin-top: 0.35rem; font-size: 0.78rem; color: var(--fg-dimmer);
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  }
+
+  .story { max-width: 62ch; margin: 0 auto; }
+  .story p { color: var(--fg-dim); margin: 0 0 1rem; }
+  .story strong { color: var(--fg); }
+  .tl {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.78rem; color: var(--accent-soft);
+  }
+  pre {
+    background: var(--bg-panel); border: 1px solid var(--line);
+    border-radius: 6px; padding: 1rem 1.1rem; overflow-x: auto;
+    font-size: 0.82rem; color: var(--accent-soft); text-align: left;
+  }
+  .callout {
+    background: var(--bg-panel); border: 1px solid var(--line);
+    border-left: 3px solid var(--paper); border-radius: 6px;
+    padding: 1.1rem 1.2rem; color: var(--fg-dim); max-width: 62ch; margin: 0 auto;
+  }
+  .callout strong { color: var(--fg); }
+
+  footer { border-top: 1px solid var(--line); padding: 2.4rem 1.5rem 3rem; }
+  .footer-inner {
+    max-width: 980px; margin: 0 auto; display: flex;
+    justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+  }
+  .footer-links {
+    display: flex; gap: 1.4rem; flex-wrap: wrap;
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.8rem; color: var(--fg-dim);
+  }
+  .footer-links a { text-decoration: none; }
+  .footer-links a:hover { color: var(--accent-soft); }
+  .mu-mark {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.8rem; color: var(--fg-dimmer);
+  }
+  .mu-mark span { color: var(--paper); }
+
+  @media (max-width: 720px) {
+    .stack-grid, .metrics { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 480px) {
+    .metrics { grid-template-columns: 1fr; }
+  }
+  @media (prefers-reduced-motion: reduce) { #paper-rain { display: none; } }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <canvas id="paper-rain" aria-hidden="true"></canvas>
+  <div class="hero-inner">
+    <p class="eyebrow">prepare-only · metrics + synthetic · no PHI in-repo</p>
+    <h1 class="wordmark"><span>A.I.D.A.</span></h1>
+    <p class="tagline">Same-day care packets are too dense to re-read under stress. This lab structures them into reviewable markdown — and never puts the chart in git.</p>
+    <div class="hero-cta">
+      <a class="btn primary" href="https://github.com/the1truedan/aida-complex-doc-lab">View on GitHub</a>
+      <a class="btn" href="https://github.com/the1truedan/aida-complex-doc-lab/releases/tag/v0.2.0">v0.2.0</a>
+      <a class="btn" href="https://the1truedan.github.io/ai-gateway/">ai-gateway</a>
+      <span class="version-chip">v<b>0.2.0</b> · MIT · public</span>
+    </div>
+  </div>
+</div>
+
+<section class="band">
+  <div class="section-head">
+    <p class="section-eyebrow">why this exists</p>
+    <h2 class="section-title">Nine notes. Fifteen months. Meeting in the morning.</h2>
+    <p class="section-sub">Family caregivers get multi-document packets hours before a care-system meeting. Re-reading everything is the failure mode. Structure the pile. Leave the bodies out of the public tree.</p>
+  </div>
+  <div class="stack-grid">
+    <div class="stack-card">
+      <span class="role">harness</span>
+      <h3>Synthetic triage</h3>
+      <p>A runnable ADA-ish scorer on invented visit notes. Stdlib. No network. Fixtures are fake people on purpose.</p>
+    </div>
+    <div class="stack-card">
+      <span class="role">proof</span>
+      <h3>Scrubbed metrics</h3>
+      <p>One live packet, file-timestamp proof only: counts, sizes, scores, wall clock. No names. No snippets. No hashes of the real PDFs.</p>
+    </div>
+    <div class="stack-card">
+      <span class="role">boundary</span>
+      <h3>PHI stays out</h3>
+      <p>Legal names, MRNs, visit text, synthesis bodies, screenshots — never commit. Agents do not walk medical storage “for context.”</p>
+    </div>
+    <div class="stack-card">
+      <span class="role">honest limit</span>
+      <h3>Prepare-only</h3>
+      <p>Not a PTSD product. Not a clinical decision system. Not a certified Section 508 auditor. A human still signs off.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="section-head">
+    <p class="section-eyebrow">production proof · 2026-08-04</p>
+    <h2 class="section-title">The active window after extract was about twenty minutes.</h2>
+    <p class="section-sub">Staging earlier in the afternoon is not five hours of compute. Idle is idle. Bodies of the synthesis and the brief stay outside this repository.</p>
+  </div>
+  <div class="metrics">
+    <div class="metric"><div class="n">9</div><div class="l">PDFs · ~2.3 MB</div></div>
+    <div class="metric"><div class="n paper">~15 mo</div><div class="l">filename date span</div></div>
+    <div class="metric"><div class="n">160k</div><div class="l">extracted chars · no OCR</div></div>
+    <div class="metric"><div class="n pass">85</div><div class="l">ADA-ish score · 9/9</div></div>
+    <div class="metric"><div class="n paper">~19 min</div><div class="l">extract → meeting brief</div></div>
+    <div class="metric"><div class="n">0</div><div class="l">clinical bodies in git</div></div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="section-head">
+    <p class="section-eyebrow">try the shape</p>
+    <h2 class="section-title">Synthetic fixtures only. Stdlib. Then grep for what must never appear.</h2>
+  </div>
+<pre>python3 scripts/run_harness.py fixtures/synthetic --json /tmp/lab_out.json
+bash scripts/verify_no_phi_grep.sh
+# optional: python3 -m pytest -q</pre>
+</section>
+
+<section class="band">
+  <div class="section-head">
+    <p class="section-eyebrow">locality</p>
+    <h2 class="section-title">Policy-strong is not a cryptographic receipt.</h2>
+  </div>
+  <div class="stack-grid">
+    <div class="stack-card">
+      <span class="role">strong</span>
+      <h3>No PHI in git</h3>
+      <p>Verify script plus a scrubbed history. Real tokens live only in a gitignored operator denylist.</p>
+    </div>
+    <div class="stack-card">
+      <span class="role">policy</span>
+      <h3>Local model route</h3>
+      <p>Care / PHI work stays on operator staging with a local-only model. No free-cloud façades. This repo does not prove the packet never left the house.</p>
+    </div>
+    <div class="stack-card">
+      <span class="role">stretch</span>
+      <h3>No cloud token</h3>
+      <p>Absolute proof needs a gateway audit receipt for that session. Template only. Do not overclaim.</p>
+    </div>
+    <a class="stack-card" href="https://github.com/the1truedan/aida-complex-doc-lab/blob/main/docs/PHI_BOUNDARY.md">
+      <span class="role">the rule</span>
+      <h3>PHI boundary</h3>
+      <p>What never enters git, what is always ok, and why production PDF hashes are omitted.</p>
+      <span class="link-hint">PHI_BOUNDARY.md →</span>
+    </a>
+  </div>
+</section>
+
+<section class="band">
+  <div class="section-head">
+    <p class="section-eyebrow">where it sits</p>
+    <h2 class="section-title">A.I.D.A. is the middle of a longer document chain.</h2>
+    <p class="section-sub">This lab exercises first-pass structure and ADA-ish triage. The rest of the mesh stays in the private control repo.</p>
+  </div>
+<pre>raw docs
+  → intake
+  → A.I.D.A. first_pass     structure · ADA-ish triage · prepare-only
+  → A.I.D.A. deep_assurance when flags need more
+  → markdown archival
+  → PHI detect / consent / rule gate / audit
+  → immutable receipt — no raw bodies</pre>
+  <div class="callout" style="margin-top:1.6rem">
+    Code work can use the public <a href="https://the1truedan.github.io/ai-gateway/">ai-gateway</a> door. Care work does not. <strong>Do not</strong> point a coding CLI at a clinical packet “to help.”
+  </div>
+</section>
+
+<section class="band">
+  <div class="section-head">
+    <p class="section-eyebrow">siblings</p>
+    <h2 class="section-title">This is the document-proof slice. The other pages are the house around it.</h2>
+  </div>
+  <div class="stack-grid">
+    <a class="stack-card" href="https://the1truedan.github.io/ai-gateway/">
+      <span class="role">the door</span>
+      <h3>ai-gateway</h3>
+      <p>Headroom → LiteLLM for code work. Not the PHI route.</p>
+      <span class="link-hint">the1truedan.github.io/ai-gateway →</span>
+    </a>
+    <a class="stack-card" href="https://the1truedan.github.io/grok-tua-tok-tua/">
+      <span class="role">the launchers</span>
+      <h3>grok-tua / tok-tua</h3>
+      <p>Dual-pane CLIs that show whether the door is up. They do not read visit notes.</p>
+      <span class="link-hint">the1truedan.github.io/grok-tua-tok-tua →</span>
+    </a>
+    <a class="stack-card" href="https://the1truedan.github.io/johnny-appleseed-chipper/">
+      <span class="role">custody</span>
+      <h3>johnny-appleseed-chipper</h3>
+      <p>Classify, hash, receipt for files you already hold. Same “do not crawl, do not overclaim” spine.</p>
+      <span class="link-hint">the1truedan.github.io/johnny-appleseed-chipper →</span>
+    </a>
+    <a class="stack-card" href="https://the1truedan.github.io/mok-tua/">
+      <span class="role">pictures</span>
+      <h3>mok-tua</h3>
+      <p>Local Comfy storyboard box. A different product. This lab is paperwork, not frames.</p>
+      <span class="link-hint">the1truedan.github.io/mok-tua →</span>
+    </a>
+  </div>
+</section>
+
+<section class="band">
+  <div class="section-head">
+    <p class="section-eyebrow">how it came to be</p>
+    <h2 class="section-title">The packet arrived. The meeting was in the morning.</h2>
+  </div>
+  <div class="story">
+    <p>Home-lab caregiving work kept hitting the same wall: a stack of multi-page notes, not enough hours, and agents that would cheerfully commit the chart if you let them.</p>
+    <p>A.I.D.A. grew as prepare-only structure between raw intake and audit. This public lab freezes a <strong>scrubbed production story</strong> so the next session does not rediscover the problem by walking medical storage.</p>
+    <p><span class="tl">4–5 August 2026</span> — live nine-PDF first pass, local-only, ~19 minutes extract to brief. <span class="tl">Early August 2026</span> — public lab with synthetic fixtures. <span class="tl">12 August 2026</span> — v0.1.0. <span class="tl">16 August 2026</span> — this page.</p>
+    <p>Future public extracts (<code>ada-doc-check</code>, <code>plain-language-relay</code>) can ship without clinical bodies. This repo feeds them honesty, not a substitute product.</p>
+    <p>Independent. Not affiliated with any care-system vendor. © 2026 M.A.N.A.G.E.R. LLC — <em>prepare for the care when we cannot be there</em>.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <span class="mu-mark">structure the pile · <span>leave the chart out</span></span>
+    <nav class="footer-links">
+      <a href="https://github.com/the1truedan/aida-complex-doc-lab/blob/main/README.md">README</a>
+      <a href="https://github.com/the1truedan/aida-complex-doc-lab/blob/main/CHANGELOG.md">Changelog</a>
+      <a href="https://github.com/the1truedan/aida-complex-doc-lab/blob/main/LICENSE">MIT</a>
+      <a href="https://the1truedan.github.io/ai-gateway/">ai-gateway</a>
+      <a href="https://the1truedan.github.io/johnny-appleseed-chipper/">johnny</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var canvas = document.getElementById('paper-rain');
+  if (!canvas || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var ctx = canvas.getContext('2d');
+  var hero = canvas.parentElement;
+  var pages = [], bars = [], ticks = [];
+  function size() {
+    var r = hero.getBoundingClientRect();
+    canvas.width = r.width; canvas.height = r.height;
+    pages = []; bars = []; ticks = [];
+    var i, n = Math.max(10, Math.floor(r.width / 90));
+    for (i = 0; i < n; i++) {
+      pages.push({ x: Math.random() * r.width, y: Math.random() * r.height, v: 0.22 + Math.random() * 0.35, w: 10 + Math.random() * 8, h: 14 + Math.random() * 10, a: (Math.random() - 0.5) * 0.4 });
+      bars.push({ x: Math.random() * r.width, y: Math.random() * r.height, v: 0.18 + Math.random() * 0.28, w: 16 + Math.random() * 22 });
+      ticks.push({ x: Math.random() * r.width, y: Math.random() * r.height, v: 0.2 + Math.random() * 0.3, s: 3 + Math.random() * 2 });
+    }
+  }
+  size();
+  window.addEventListener('resize', size);
+  function frame() {
+    var w = canvas.width, h = canvas.height, i, d;
+    ctx.fillStyle = 'rgba(16,20,28,0.22)';
+    ctx.fillRect(0, 0, w, h);
+    ctx.strokeStyle = 'rgba(232,194,122,0.4)';
+    ctx.lineWidth = 1;
+    for (i = 0; i < pages.length; i++) {
+      d = pages[i]; d.y += d.v; if (d.y > h + 16) { d.y = -16; d.x = Math.random() * w; }
+      ctx.save(); ctx.translate(d.x, d.y); ctx.rotate(d.a);
+      ctx.strokeRect(-d.w / 2, -d.h / 2, d.w, d.h);
+      ctx.restore();
+    }
+    ctx.strokeStyle = 'rgba(142,180,255,0.55)';
+    for (i = 0; i < bars.length; i++) {
+      d = bars[i]; d.y += d.v; if (d.y > h) { d.y = -6; d.x = Math.random() * w; }
+      ctx.beginPath(); ctx.moveTo(d.x, d.y); ctx.lineTo(d.x + d.w, d.y); ctx.stroke();
+    }
+    ctx.strokeStyle = 'rgba(125,206,160,0.55)';
+    ctx.lineWidth = 1.4;
+    for (i = 0; i < ticks.length; i++) {
+      d = ticks[i]; d.y += d.v; if (d.y > h) { d.y = -6; d.x = Math.random() * w; }
+      ctx.beginPath(); ctx.moveTo(d.x, d.y); ctx.lineTo(d.x + d.s, d.y + d.s); ctx.lineTo(d.x + d.s * 2.2, d.y - d.s * 0.8); ctx.stroke();
+    }
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>
