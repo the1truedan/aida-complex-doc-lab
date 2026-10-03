@@ -98,3 +98,9 @@ Optional local denylist for operators handling real packets: copy
 
 This lab is a **prepare-only slice**: synthetic harness + scrubbed metrics + cognitive-load framing.  
 The private control monorepo is planned for a later **public fork** with PHI and private identifiers removed — enough of the human *why* left in that others can see how lived caregiving, ethics, and hard work turned into tools, without chart dumps or personal chat noise. Full intent: [`docs/RELEASE_RELATIONSHIP.md`](docs/RELEASE_RELATIONSHIP.md) § *Eventually: the control monorepo, scrubbed*.
+
+<!-- manager-footer:start -->
+---
+
+<p align="center">© 2026 M.A.N.A.G.E.R. LLC — prepare for the care when we cannot be there · <a href="https://linktr.ee/the1truedan">Linktree</a> · <a href="https://ko-fi.com/the1truedan">Ko-fi</a></p>
+<!-- manager-footer:end -->
