@@ -99,8 +99,13 @@ Optional local denylist for operators handling real packets: copy
 This lab is a **prepare-only slice**: synthetic harness + scrubbed metrics + cognitive-load framing.  
 The private control monorepo is planned for a later **public fork** with PHI and private identifiers removed — enough of the human *why* left in that others can see how lived caregiving, ethics, and hard work turned into tools, without chart dumps or personal chat noise. Full intent: [`docs/RELEASE_RELATIONSHIP.md`](docs/RELEASE_RELATIONSHIP.md) § *Eventually: the control monorepo, scrubbed*.
 
-<!-- manager-footer:start -->
 ---
 
-<p align="center">© 2026 M.A.N.A.G.E.R. LLC — prepare for the care when we cannot be there · <a href="https://linktr.ee/the1truedan">Linktree</a> · <a href="https://ko-fi.com/the1truedan">Ko-fi</a></p>
-<!-- manager-footer:end -->
+<p align="left">
+  <a href="https://the1truedan.github.io/aida-complex-doc-lab/"><img src="https://img.shields.io/badge/pages-aida--complex--doc--lab-e8b84a?style=for-the-badge" alt="GitHub Pages"></a>
+  <a href="https://github.com/the1truedan/aida-complex-doc-lab/releases"><img src="https://img.shields.io/badge/version-v0.2.0-3dcaa0?style=for-the-badge" alt="v0.2.0"></a>
+  <a href="https://linktr.ee/the1truedan"><img src="https://img.shields.io/badge/Linktree-39E09B?style=for-the-badge&logo=linktree&logoColor=white" alt="Linktree"></a>
+  <a href="https://ko-fi.com/the1truedan"><img src="https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white" alt="Ko-fi"></a>
+</p>
+
+**© 2026 M.A.N.A.G.E.R. LLC** — *prepare for the care when we cannot be there*
